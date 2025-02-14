@@ -27,9 +27,9 @@ class BoardingHouseResource extends Resource
     ->tabs([
         Forms\Components\Tabs\Tab::make('Informasi Umum')
             ->schema([
-                Forms\Components\FileUpload::make('Thumbnail')
+                Forms\Components\FileUpload::make('thumbnail')
                     ->image()
-                    ->directory('cities')
+                    ->directory('boarding_house')
                     ->required()
                     ->columnSpan(2), 
                 Forms\Components\TextInput::make('name')
@@ -118,6 +118,7 @@ class BoardingHouseResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
