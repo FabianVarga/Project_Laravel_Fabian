@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->string('thumbnail');
-            $table->foreignId('city_id')->constrained();
-            $table->foreignId('category_id')->constrained();
+            $table->string('thumbnail')->nullable();
+            $table->foreignId('city_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('description');
             $table->integer('price');
             $table->text('address');

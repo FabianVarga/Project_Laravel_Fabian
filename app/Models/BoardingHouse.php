@@ -12,13 +12,13 @@ class BoardingHouse extends Model
     protected $fillable = [
         'name',
         'slug',
-        'thumbnail',
         'city_id',
         'category_id',
         'price',
         'address',
+        'thumbnail', // Menambahkan thumbnail
+        'description', // Menambahkan description
     ];
-
     public function city()
     {
         return $this->belongsTo(City::class);
