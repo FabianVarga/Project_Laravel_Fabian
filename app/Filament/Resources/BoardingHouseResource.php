@@ -110,7 +110,11 @@ class BoardingHouseResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('city.name'),
+                Tables\Columns\TextColumn::make('category.name'),
+                Tables\Columns\TextColumn::make('price'),
+                Tables\Columsns\ImageColumn::make('thumbnail'),
             ])
             ->filters([
                 //
