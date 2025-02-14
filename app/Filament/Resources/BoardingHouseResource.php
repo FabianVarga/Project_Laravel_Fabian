@@ -90,7 +90,7 @@ class BoardingHouseResource extends Resource
                             ->numeric()
                             ->prefix('IDR')
                             ->required(),
-                        Forms\Components\Toggle::make('is_avaible')
+                        Forms\Components\Toggle::make('is_available')
                             ->required(),
                         Forms\Components\Repeater::make('images')
                             ->relationship('images')
